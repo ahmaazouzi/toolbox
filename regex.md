@@ -17,19 +17,26 @@
 | --- | --- | --- |
 | **`\d`** | **`[0-9]`** | stands for any digit.
 | **`\w`** | **`[a-zA-Z0-9]`** | stands for word and can include any alphanumeric character.
-| **`\s`** | | is any whitespace (space, tab but probably not a line break).
-| **`\D`** | | is anything that's not a digit
-| **`\W`** | | is anything that's not word.
-| **`S`** | | is anything that's not whitespace.
-| **`.`** | | matches any character whatsoever. 
+| **`\s`** | | any whitespace (space, tab but probably not a line break).
+| **`\D`** | | anything that's not a digit
+| **`\W`** | | anything that's not word.
+| **`\S`** | | anything that's not whitespace.
+| **`.`** | | any character whatsoever. 
 
 - **Quantifiers** are metacharacters that modify the previous characters in the regex and indicate their quanity. They include:
-| <span style="color:red">**`*`**</span> -> zero or more.
-| **`+`** -> one or more.
-| **`?`** -> is for 0 or one (optional character).
-| **`{min, max}`** between min and max.
-| **`{n}`** these many characters.
+
+| Quantifier | Meaning
+| --- | --- |
+| **`*`** | zero or more.
+| **`+`** | one or more.
+| **`?`**  | 0 or one (optional character).
+| **`{min, max}`** | between min and max.
+| **`{n}`** | these many characters.
+
 - **Positions** indicators include:
-| **`^`** is beginning of the line.
-| **`$`** is end of a line.
-| **`\b`** is a word boundry (beginning or end of a word.)
+
+| Symbol | Meaning 
+| --- | --- |
+| **`^`** | beginning of the line.
+| **`$`** | end of a line.
+| **`\b`** | word boundry (beginning or end of a word.)
