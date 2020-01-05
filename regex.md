@@ -87,3 +87,4 @@ Last Name: Maspero
 - Group `$0` is the whole matched pattern. If you use parentheses to capture the whole pattern, it is still 'referenced' by $0, but also becomes referenced by $1. 
 - The whole universe **`.*`** is greedy. If you append an **`?`** to it, it stops being greedy. When coupled with a **`?`** quantifiers stop being greedy. This is diffferent from when it's coupled with characters and means 0 or more characters.
 - You can also refer to a group inside the regular expression itself. A classic scenario is when searching for double words. This can be done with this expression: **`\b(\w+)\s\1\b`**.
+- **Flags** change the behavior of regex. For example, the **`\g`** flag in javascript is for global matching.
