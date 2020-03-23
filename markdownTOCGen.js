@@ -8,7 +8,7 @@ const INCODEBLOCK = 1;
 let inCodeBLOCKState = OUTCODEBLOCK;
 
 const readInterface = readline.createInterface({
-    input: fs.createReadStream('file-path-goes-here'),
+    input: fs.createReadStream('file.md'),
     console: false
 });
 
@@ -20,8 +20,8 @@ readInterface.on('line', function(line) {
 		console.log(header + link);
 	}
 
-	if ((/^```/).test(line))
-		toggleCodeBlock(inCodeBLOCKState);
+	// if ((/^```/).test(line))
+	// 	toggleCodeBlock(inCodeBLOCKState);
 })
 
 genHeader = (s) => {
@@ -35,7 +35,7 @@ genIndent = (s) => {
 	let i = 0;
 	while (s[i] === '#')
 		i++;
-	return i
+	return i;
 }
 
 genPrefix = (indent) => {
@@ -58,7 +58,7 @@ genPrefix = (indent) => {
 }
 
 genLink = (s) => {
-	s = s.replace(/[#,`"':.?@]/g, "").
+	s = s.replace(/[#,`"':.?@<>;]/g, "").
 		trim().
 		toLowerCase().
 		replace(/^/,"(#").
