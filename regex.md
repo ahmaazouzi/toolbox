@@ -31,6 +31,7 @@
 | **`+`** | one or more.
 | **`?`**  | 0 or one (optional one character).
 | **`{min, max}`** | between min and max.
+| **`{, max}`** | between 0 and max.
 | **`{n}`** | these many characters.
 
 - **Positions** indicators include:
